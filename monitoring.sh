@@ -47,7 +47,7 @@ IP_V4_ADDRESS=$(hostname -I)
 MAC_ADDRESS=$(ifconfig -a | grep -e "ether" | awk '{print $2}')
 
 
-SUDO_COUNT=$(grep -sce "COMMAND" /var/log/sudo/sudo_log)
+SUDO_COUNT=$(grep -sce "COMMAND" /var/log/sudo/sudo.log)
 
 wall "	<><><><><><><><><><><><><><>
 		#Architecture: $ARCHITECTURE
